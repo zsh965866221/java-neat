@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by zsh96 on 2017/8/24.
  */
-public class test {
+public class Xor_Test {
     public static double[][] xor_inputs={{0,0},{0,1},{1,0},{1,1}};
     public static double[][] xor_outputs={{0},{1},{1},{0}};
     public static void main(String[] args) throws CloneNotSupportedException {

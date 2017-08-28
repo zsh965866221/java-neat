@@ -1,10 +1,9 @@
 package com.zsh_o.neat;
 
-import com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator;
 import com.zsh_o.neat.genome.DefaultGenome;
 import com.zsh_o.neat.species.DefaultSpeciesManager;
 import com.zsh_o.neat.stagnation.DefaultStagnation;
-import com.zsh_o.test.test;
+import com.zsh_o.test.Xor_Test;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -78,9 +77,9 @@ public class Population {
 
             System.out.println(best.fitness);
             FeedForward net=new FeedForward(best,config);
-            for(int i = 0; i< test.xor_inputs.length; i++){
-                double[] output=net.activate(test.xor_inputs[i]);
-                System.out.println(test.xor_inputs[i][0]+" , "+test.xor_inputs[i][1]+" = "+test.xor_outputs[i][0]+" , "+output[0]);
+            for(int i = 0; i< Xor_Test.xor_inputs.length; i++){
+                double[] output=net.activate(Xor_Test.xor_inputs[i]);
+                System.out.println(Xor_Test.xor_inputs[i][0]+" , "+ Xor_Test.xor_inputs[i][1]+" = "+ Xor_Test.xor_outputs[i][0]+" , "+output[0]);
             }
         }
         return best_genome;
