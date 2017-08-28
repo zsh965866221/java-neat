@@ -1,10 +1,8 @@
 package com.zsh_o.neat;
 
-import com.zsh_o.neat.genome.DefaultGenome;
 import io.vavr.Tuple;
 import io.vavr.Tuple2;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -74,8 +72,13 @@ public class Utils {
         }
         return false;
     }
-    public static <T,K> Iterator<Tuple2<T,K>> zip(Collection<T> c1,Collection<K> c2){
-        return new T2Iterator<T,K>(c1,c2);
+    public static <T,K> Iterable<Tuple2<T, K>> zip(Collection<T> c1, Collection<K> c2){
+        return new Iterable<Tuple2<T, K>>() {
+            @Override
+            public Iterator<Tuple2<T, K>> iterator() {
+                return new T2Iterator<>(c1,c2);
+            }
+        };
     }
     static class T2Iterator<T,K> implements Iterator<Tuple2<T,K>>{
         Iterator<T> iterator1;
