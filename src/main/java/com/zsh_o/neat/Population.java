@@ -75,7 +75,7 @@ public class Population {
             generation+=1;
 
 
-            System.out.println("generation: "+n);
+            System.out.println("generation: "+generation);
             System.out.println("fitness: "+best.fitness);
             FeedForward net=new FeedForward(best,config);
             for(int i = 0; i< Xor_Test.xor_inputs.length; i++){

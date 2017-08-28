@@ -1,12 +1,11 @@
 package com.zsh_o.neat;
 
 import com.zsh_o.neat.genome.DefaultGenome;
+import io.vavr.Tuple;
+import io.vavr.Tuple2;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by zsh96 on 2017/8/22.
@@ -74,5 +73,28 @@ public class Utils {
                 return true;
         }
         return false;
+    }
+    public static <T,K> Iterator<Tuple2<T,K>> zip(Collection<T> c1,Collection<K> c2){
+        return new T2Iterator<T,K>(c1,c2);
+    }
+    static class T2Iterator<T,K> implements Iterator<Tuple2<T,K>>{
+        Iterator<T> iterator1;
+        Iterator<K> iterator2;
+        public boolean hasNext() {
+            return iterator1.hasNext()&&iterator2.hasNext();
+        }
+
+        public Tuple2<T,K> next() {
+            return Tuple.of(iterator1.next(),iterator2.next());
+        }
+
+        public T2Iterator(Collection<T> c1,Collection<K> c2) {
+            iterator1=c1.iterator();
+            iterator2=c2.iterator();
+        }
+        public void update(Collection<T> c1,Collection<K> c2) {
+            iterator1=c1.iterator();
+            iterator2=c2.iterator();
+        }
     }
 }
