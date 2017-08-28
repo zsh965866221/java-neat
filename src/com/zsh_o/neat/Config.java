@@ -21,7 +21,7 @@ public class Config {
     public ListConfig<IAggregate> aggregationConfig=new ListConfig(0,false,0, AggregationFunctions.instance().getActivates());
     public GeneConfig nodeConfig=new GeneConfig(0.5);
     public GeneConfig connectionConfig=new GeneConfig(0.5);
-    public DoubleConfig weightConfig=new DoubleConfig(0,1,0.05,0.8,1,30,-30,"gaussian");
+    public DoubleConfig weightConfig=new DoubleConfig(0,1,0.05,0.8,0.7,30,-30,"gaussian");
     public BoolConfig enabledConfig=new BoolConfig(true,0.001,0,0,false);
     public GenomeConfig defalutGenomeConfig=new GenomeConfig(2,1,0,1, 0.5,0.5,0.2,0.2,false,"full_forward",true);
     public StagnationConfig defaultStagnationConfig=new StagnationConfig("mean",10,2);

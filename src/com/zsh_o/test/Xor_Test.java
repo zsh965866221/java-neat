@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * Created by zsh96 on 2017/8/24.
  */
 public class Xor_Test {
-    public static double[][] xor_inputs={{0,0},{0,1},{1,0},{1,1}};
-    public static double[][] xor_outputs={{0},{1},{1},{0}};
+    public static double[][] xor_inputs={{0,0},{0,1},{1,0},{1,1},{.5,.5}};
+    public static double[][] xor_outputs={{0},{1},{1},{0},{.5}};
     public static void main(String[] args) throws CloneNotSupportedException {
         Config config=new Config();
         Population population= new Population(config);
@@ -31,7 +31,7 @@ public class Xor_Test {
                     }
                 }
             }
-        }, 100);
+        }, 300);
 
         System.out.println("----------------------------------------------------------");
         for(DefaultConnectionGene gene:winner.connections){

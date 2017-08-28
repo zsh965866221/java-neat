@@ -75,12 +75,14 @@ public class Population {
             generation+=1;
 
 
-            System.out.println(best.fitness);
+            System.out.println("generation: "+n);
+            System.out.println("fitness: "+best.fitness);
             FeedForward net=new FeedForward(best,config);
             for(int i = 0; i< Xor_Test.xor_inputs.length; i++){
                 double[] output=net.activate(Xor_Test.xor_inputs[i]);
                 System.out.println(Xor_Test.xor_inputs[i][0]+" , "+ Xor_Test.xor_inputs[i][1]+" = "+ Xor_Test.xor_outputs[i][0]+" , "+output[0]);
             }
+            System.out.println("------------------------------------------------------------------------------------------------------------");
         }
         return best_genome;
     }
