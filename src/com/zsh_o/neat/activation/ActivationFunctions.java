@@ -45,7 +45,7 @@ public class ActivationFunctions {
 
     public ActivationFunctions() {
         add(new Sigmoid("sigmoid"));
-//        add(new Tanh("tanh"));
+        add(new Tanh("tanh"));
     }
     private static ActivationFunctions INSTANCE;
     public static ActivationFunctions instance(){

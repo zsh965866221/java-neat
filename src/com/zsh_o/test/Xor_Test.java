@@ -46,7 +46,7 @@ public class Xor_Test {
             double[] output=net.activate(xor_inputs[i]);
             System.out.println(xor_inputs[i][0]+" , "+xor_inputs[i][1]+" = "+xor_outputs[i][0]+" , "+output[0]);
         }
-
+        System.out.println("final species size: "+config.speciesManager.species.size());
         System.out.println("over");
     }
 }

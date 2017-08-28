@@ -23,9 +23,9 @@ public class Config {
     public GeneConfig connectionConfig=new GeneConfig(0.5);
     public DoubleConfig weightConfig=new DoubleConfig(0,1,0.05,0.8,1,30,-30,"gaussian");
     public BoolConfig enabledConfig=new BoolConfig(true,0.001,0,0,false);
-    public GenomeConfig defalutGenomeConfig=new GenomeConfig(2,1,0,1, 0.5,0.5,0.3,0.2,false,"full_forward",true);
+    public GenomeConfig defalutGenomeConfig=new GenomeConfig(2,1,0,1, 0.5,0.5,0.2,0.2,false,"full_forward",true);
     public StagnationConfig defaultStagnationConfig=new StagnationConfig("mean",10,2);
-    public SpeciesConfig defaultSpeciesConfig=new SpeciesConfig(5);
+    public SpeciesConfig defaultSpeciesConfig=new SpeciesConfig(3);
     public ReproductionConfig reproductionConfig=new ReproductionConfig(2,0.2,2);
     public PopulationConfig populationConfig=new PopulationConfig("max",true,150,false,3.9);
 

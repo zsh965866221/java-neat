@@ -52,7 +52,7 @@ public class AggregationFunctions {
 
     public AggregationFunctions() {
         add(new Sum("sum"));
-//        add(new Product("product"));
+        add(new Product("product"));
     }
     private static AggregationFunctions INSTANCE;
     public static AggregationFunctions instance(){
