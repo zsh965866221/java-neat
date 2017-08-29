@@ -27,7 +27,7 @@ public class Config {
     public StagnationConfig defaultStagnationConfig=new StagnationConfig("mean",10,2);
     public SpeciesConfig defaultSpeciesConfig=new SpeciesConfig(4);
     public ReproductionConfig reproductionConfig=new ReproductionConfig(2,0.2,2);
-    public PopulationConfig populationConfig=new PopulationConfig("max",false,200,false,3.99);
+    public PopulationConfig populationConfig=new PopulationConfig("max",true,200,false,3.99);
 
     public DefaultStagnation stagnation=new DefaultStagnation(this);
     public DefaultGenomeManager genomeManager=new DefaultGenomeManager(this);
